@@ -12,7 +12,6 @@ class Solution(object):
         :rtype: str
         """
         words=s.split()
-        result=map(lambda word:list(word),words)
-        map(lambda word:word.reverse(),result)
-        sr=map(lambda chari:''.join(chari),result)
-        return ' '.join(sr)
+        result=map(lambda word:word[::-1],words)
+        return ' '.join(result)
+        
