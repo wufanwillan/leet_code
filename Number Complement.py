@@ -13,13 +13,9 @@
 # Explanation: The binary representation of 1 is 1 (no leading zero bits), and its complement is 0. So you need to output 0.
 
 class Solution(object):
-    def reverseWords(self, s):
+    def findComplement(self, num):
         """
-        :type s: str
-        :rtype: str
+        :type num: int
+        :rtype: int
         """
-        words=s.split()
-        result=map(lambda word:list(word),words)
-        map(lambda word:word.reverse(),result)
-        sr=map(lambda chari:''.join(chari),result)
-        return ' '.join(sr)
+        return num^((1<<len(bin(num))-2)-1)
