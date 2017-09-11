@@ -9,6 +9,4 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        s=list(s)
-        s.reverse()
-        return ''.join(s)
+       return s[::-1]
