@@ -27,4 +27,5 @@ class Solution(object):
         result=reduce(lambda x,y:x^y,ls)
         return chr(result)
 
-#         return chr(reduce(operator.xor, map(ord, s), 0) ^ reduce(operator.xor, map(ord, t), 0))
+# #         return chr(reduce(operator.xor, map(ord, s), 0) ^ reduce(operator.xor, map(ord, t), 0))
+# return list((collections.Counter(t) - collections.Counter(s)))[0]
