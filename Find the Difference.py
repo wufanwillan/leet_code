@@ -26,3 +26,5 @@ class Solution(object):
         ls=map(lambda x:ord(x),s+t)        
         result=reduce(lambda x,y:x^y,ls)
         return chr(result)
+
+#         return chr(reduce(operator.xor, map(ord, s), 0) ^ reduce(operator.xor, map(ord, t), 0))
