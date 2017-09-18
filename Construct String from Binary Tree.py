@@ -46,14 +46,16 @@ class Solution(object):
             if t is None:
                 return
             result.append("{0}".format(t.val))
-            if t.left:
+            if  t.right:
                 result.append('(')
                 traveral(t.left)
                 result.append(')')
-            if t.right:
                 result.append('(')
                 traveral(t.right)
                 result.append(')')
+            elif t.left:
+                result.append('(')
+                traveral(t.left)
+                result.append(')')
         traveral(t)
         return ''.join(result)
-            
